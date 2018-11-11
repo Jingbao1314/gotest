@@ -1,7 +1,8 @@
 package main
 
-import "awesomeProject/myinterface"
+import "awesomeProject/myroutinetest"
 
+//https://studygolang.com/search?q=mheap&f=text
 //https://studygolang.com/articles/13031 编译相关
 //type mystring struct {
 //	Lens int16
@@ -27,7 +28,6 @@ go run  边build边执行
 数组  切片
 
 */
-
 func main() {
 	//var xx mystring
 	//fmt.Println(unsafe.Sizeof(xx))
@@ -105,6 +105,7 @@ func main() {
 	// go build -gcflags "-l -N" test.go
 	//反汇编
 	//go build test.go   go tool objdump -s "main\.main" test
+	//go build -ldflags "-w -s" test.go
 	//var aa  = 0x1111
 	//var bb  =0x2222
 	//var c  =aa+bb
@@ -202,7 +203,7 @@ func main() {
 	//fmt.Print(files)
 	//filetest.MyLoader()
 	//filetest.-FuncTest()
-	//myroutinetest.Test()
+	myroutinetest.Test()
 	//f:=filetest.Say
 	//f()
 
@@ -214,10 +215,10 @@ func main() {
 	//buff:=make([][]byte,2)
 	//buff[0]=[]byte{1,'.',1}
 	//buff[1]=[]byte{1,2,3}
-	//myleetcode.IsValidSudoku(buff)
+	//myleetcode.IsValidSudoku(buff)--
 
-	//mylang.ResTest()
-	myinterface.Test1()
+	//mylang.MathTest()
+	//myinterface.Test3()
 	//type PipeData struct {
 	//	value   int
 	//	handler func(a int) int
@@ -236,4 +237,6 @@ func main() {
 	//
 	//a.handler = myhandler
 	//fmt.Println(a.handler(2))
+	//myinittest.MyFuncTest()
+
 }

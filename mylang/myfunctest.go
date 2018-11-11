@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+//https://studygolang.com/articles/7446   函数调用详解
+
 // 具名函数
 func Add(a, b int) int {
 	return a + b
@@ -106,4 +108,45 @@ func ResTest() {
 	m()    //wang
 	m = t.TestValue
 	m() //Li
+}
+
+type MyMath struct {
+	A int
+	B int
+}
+
+func Adds(a, b int) int {
+	return a + b
+}
+func Sub(a, b int) int {
+	return a - b
+}
+func (this MyMath) Multiply(a, b int) int {
+	return a * b
+}
+func (this MyMath) Div(a, b int) int {
+	return a / b
+}
+
+func MathTest() {
+	mathMap := make(map[string]MyMath)
+	add := MyMath{1, 2}
+	mathMap["Adds"] = add
+	sub := MyMath{1, 2}
+	mathMap["Sub"] = sub
+
+	for k, v := range mathMap {
+		switch k {
+		case "Adds":
+			var a = Adds(v.A, v.B)
+			fmt.Println(a)
+		case "Sub":
+			{
+				var a = Sub(v.A, v.B)
+				fmt.Println(a)
+
+			}
+		}
+
+	}
 }

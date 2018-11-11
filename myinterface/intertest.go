@@ -7,6 +7,7 @@ import (
 )
 
 //https://studygolang.com/articles/15278
+//https://studygolang.com/articles/5771  接收者
 type t1 int
 type t2 int
 
@@ -131,7 +132,6 @@ type Teacher struct {
 func (this Teacher) tellAnswer(answer int) {
 	fmt.Println("答案是:" + strconv.Itoa(answer))
 }
-
 func (this Teacher) askAnswer() {
 	this.Stus.ResoveQues(this)
 }
