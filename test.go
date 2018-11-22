@@ -1,6 +1,6 @@
 package main
 
-import "awesomeProject/myroutinetest"
+import "awesomeProject/mySync"
 
 //https://studygolang.com/search?q=mheap&f=text
 //https://studygolang.com/articles/13031 编译相关
@@ -203,10 +203,11 @@ func main() {
 	//fmt.Print(files)
 	//filetest.MyLoader()
 	//filetest.-FuncTest()
-	myroutinetest.Test()
+	//myroutinetest.Test()
 	//f:=filetest.Say
 	//f()
 
+	//filetest.Test()
 	//fmt.Println(myleetcode.StrStr("acc","cc"))
 	//x:=make([][]int,3)
 	//x[0]=[]int{0,1,2}
@@ -238,5 +239,6 @@ func main() {
 	//a.handler = myhandler
 	//fmt.Println(a.handler(2))
 	//myinittest.MyFuncTest()
+	mySync.MyTicker()
 
 }

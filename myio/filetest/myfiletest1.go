@@ -83,3 +83,24 @@ func MyLoader() {
 	fmt.Println(string(out))
 
 }
+
+func Test() {
+	f, err := os.Open("/home/jingbao/桌面/dockerApi")
+	if err != nil {
+		os.Exit(0)
+	}
+	defer f.Close()
+
+	b1 := make([]byte, 5)
+	n1, err := f.Read(b1)
+
+	fmt.Printf("%d bytes: %s\n", n1, string(b1))
+
+	o2, err := f.Seek(6, 0)
+
+	b2 := make([]byte, 2)
+	n2, err := f.Read(b2)
+
+	fmt.Printf("%d bytes @ %d: %s\n", n2, o2, string(b2))
+
+}
